@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0 0.3em;
+  box-shadow: 3px 3px #000;
+  cursor: pointer;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+section#wrapper {
+  padding: 1em;
+  max-width: 60%;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+}
+
+/* Navigation */
+nav#navigation {
+  border: 2px solid #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3em;
+  align-items: center;
+}
+
+div#time {
+  text-align: right;
+  font-size: 14px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul#nav-list {
+  display: flex;
+  gap: 0.5em;
+}
+
+ul#nav-list li {
+  padding: 0.2em;
+}
+
+ul#book-list li {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  column-gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+}
+
+ul#nav-list li:nth-child(2) {
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+h1.page-title {
+  text-align: center;
+  margin: 2em 0;
+}
+
+ul#book-list {
+  border: 2px solid #000;
+  margin-top: 1em;
+}
+
+p.title {
+  text-align: start;
+}
+
+ul#book-list li:nth-child(odd) {
+  background-color: rgb(213, 213, 213);
+}
+
+form#form {
+  text-align: center;
+}
+
+#contact h2 {
+  text-align: center;
+}
+
+form#form h2 {
+  margin: 0 0 0.5em 0;
+}
+
+form#form div.form-input input {
+  width: 60%;
+  padding: 0.3em;
+}
+
+form#form div.form-input:nth-child(3) {
+  margin: 1em 0;
+}
+
+form#form button.addBtn {
+  margin-left: 35em;
+}
+
+ul#contact-info {
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-left: 3em;
+}
+
+footer {
+  border: 2px solid #000;
+  padding: 0.2em;
+  margin-top: 2em;
+  position: absolute;
+  min-width: 53em;
+  bottom: 1em;
+}
+
+.remove-section {
+  display: none;
+}

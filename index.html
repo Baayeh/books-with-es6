@@ -8,7 +8,58 @@
   <title>Books With ES6</title>
 </head>
 <body>
-  
+  <section id="wrapper">
+    <!-- Navigation -->
+    <nav id="navigation">
+      <a href="#" class="nav-logo">Awesome Books</a>
+
+      <ul id="nav-list">
+        <li class="nav-item" id="list"><a href="#" type="button">List</a></li>
+        <li class="nav-item" id="add"><a href="#" type="button">Add new</a></li>
+        <li class="nav-item" id="contact-link"><a href="#" type="button">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="time"></div>
+
+    <!-- Page Title -->
+    <h1 class="page-title">All awesome books</h1>
+
+    <!-- Book List -->
+    <section id="bookSection">
+      <p class="no-books"></p>
+      <ul id="book-list"></ul>
+    </section>
+
+    <!--Form to add book to list -->
+    <form id="form" class="remove-section">
+      <div class="form-input">
+        <label for="title" hidden>Title</label>
+        <input type="text" id="title" name="title" placeholder="Title">
+      </div>
+      <div class="form-input">
+        <label for="author" hidden>Title</label>
+        <input type="text" id="author" name="author" placeholder="Author">
+      </div>
+      <div>
+        <button class="addBtn" type="submit">Add</button>
+      </div>
+    </form>
+
+    <!-- Contact Section -->
+    <section id="contact" class="remove-section">
+      <p>Do you have any questions or you just want to say "Hello"?</p>
+      <p>You can reach out to us!</p>
+      <ul id="contact-info">
+        <li>Our email:mail@mail.com</li>
+        <li>Our phone number:0043586534422</li>
+        <li>Our adress:Streetname 22,84503 City,Country</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Copyright</p>
+    </footer>
+  </section>
   <script type="module" src="./index.js"></script>
 </body>
 </html>
