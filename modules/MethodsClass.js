@@ -8,7 +8,7 @@ export default class Methods {
   static books = [];
 
   // get all books from the localStorage
-  static getAllBooks() {
+  static getAllBooks = () => {
     // check if localStorage is not empty
     if (localStorage.getItem('books')) {
       this.books = JSON.parse(localStorage.getItem('books'));
@@ -22,14 +22,14 @@ export default class Methods {
   }
 
   // display books to the browser
-  static displayBooks() {
+  static displayBooks = () => {
     this.books.forEach((book) => {
       this.addToBookUl(book);
     });
   }
 
   // create li with book properties and insert it to the ul tag
-  static addToBookUl(book) {
+  static addToBookUl = (book) => {
     const li = `<li class="list-item" key="${book.id}">
    <p class="title">"${book.title}" by ${book.author}</p>
    <button class="removeBtn">Remove</button>
@@ -40,7 +40,7 @@ export default class Methods {
   }
 
   // add book to array and store it in localStorage
-  static addBook(book) {
+  static addBook = (book) => {
     // add book to the books array
     this.books.push(book);
 
@@ -52,7 +52,7 @@ export default class Methods {
   }
 
   // remove book from localStorage
-  static removeBook(bookID) {
+  static removeBook = (bookID) => {
     // filter out the deleted book and return the ones left
     const result = this.books.filter((book) => String(bookID) !== String(book.id));
 
@@ -77,7 +77,7 @@ export default class Methods {
     }
   }
 
-  static displayListOnly() {
+  static displayListOnly = () => {
     // remove form section
     if (!form.classList.contains('remove-section')) {
       form.classList.add('remove-section');
@@ -96,7 +96,7 @@ export default class Methods {
     heading.textContent = 'All awesome books';
   }
 
-  static getDateFormat() {
+  static getDateFormat = () => {
     const date = new Date();
     const time = date.toLocaleTimeString();
     const month = date.toLocaleString('en-US', {
@@ -108,7 +108,7 @@ export default class Methods {
     return `${month} ${day} ${year}, ${time}`;
   }
 
-  static getSuffix(date) {
+  static getSuffix = (date) => {
     if (date > 3 && date < 21) {
       return `${date}th`;
     }
