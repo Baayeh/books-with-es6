@@ -2,7 +2,15 @@
 import Book from './modules/BookClass.js';
 import Methods from './modules/MethodsClass.js';
 import {
-  form, ul, bookSection, heading, dateTime, contactSection, contactLink, list, addNew,
+  form,
+  ul,
+  bookSection,
+  heading,
+  dateTime,
+  contactSection,
+  contactLink,
+  list,
+  addNew,
 } from './modules/DOMElements.js';
 
 // remove the other sections when list link is clicked

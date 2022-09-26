@@ -22,5 +22,11 @@
   },
   "dependencies": {
     "luxon": "^3.0.4"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": true,
+    "trailingComma": "es5",
+    "tabWidth": 2
   }
 }

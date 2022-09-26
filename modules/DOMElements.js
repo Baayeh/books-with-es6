@@ -12,5 +12,14 @@ const list = document.querySelector('#list');
 const addNew = document.querySelector('#add');
 
 export {
-  form, ul, bookSection, heading, dateTime, msg, contactSection, contactLink, list, addNew,
+  form,
+  ul,
+  bookSection,
+  heading,
+  dateTime,
+  msg,
+  contactSection,
+  contactLink,
+  list,
+  addNew,
 };
