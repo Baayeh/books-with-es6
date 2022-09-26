@@ -1,6 +1,7 @@
 import {
   form, ul, bookSection, heading, msg, contactSection,
 } from './DOMElements.js';
+import dt from './DateTime.js';
 
 // Define Methods Class
 export default class Methods {
@@ -96,18 +97,23 @@ export default class Methods {
     heading.textContent = 'All awesome books';
   }
 
+  // Get Date format
   static getDateFormat = () => {
-    const date = new Date();
-    const time = date.toLocaleTimeString();
-    const month = date.toLocaleString('en-US', {
+    const time = dt.toLocaleString({
+      hour: 'numeric',
+      minute: '2-digit',
+      second: 'numeric',
+    });
+    const month = dt.toLocaleString({
       month: 'long',
     });
-    const year = date.getFullYear();
-    const day = this.getSuffix(date.getDate());
+    const { year } = dt;
+    const day = this.getSuffix(dt.day);
 
     return `${month} ${day} ${year}, ${time}`;
   }
 
+  // Get Day suffix
   static getSuffix = (date) => {
     if (date > 3 && date < 21) {
       return `${date}th`;
